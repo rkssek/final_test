@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>웹 다이어리</title>
+    <script>
+        function saveDiary() {
+
+            var date = document.getElementById("date").value;
+            var title = document.getElementById("title").value;
+            var content = document.getElementById("content").value;     
+                   
+            console.log("날짜:", date);
+            console.log("제목:", title);
+            console.log("내용:", content);
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>웹 다이어리</h1>
+    
+    <form onsubmit="event.preventDefault(); saveDiary();">
+        <label for="date">날짜:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="content">내용:</label><br>
+        <textarea id="content" name="content" rows="5" cols="30" required></textarea><br><br>
+        
+        <input type="submit" value="저장">
+    </form>
+    <a href="javascript:history.back(-1)">
+        돌아가기
+    </a>
+</body>
+
+</html>
